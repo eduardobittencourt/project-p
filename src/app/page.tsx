@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
-  const saveBet = async (formData) => {
+  const saveBet = async (formData: FormData) => {
     "use server";
 
     console.log(formData.get("date"));
