@@ -13,10 +13,11 @@ const config: Config = {
       calligraphy: ["var(--font-calligraphy)"],
     },
     colors: {
+      white: "#ffffff",
       brown: "#af7e55",
       yellow: "#ebcd94",
-      ambar: "#e4aa74",
       gray: "#707474",
+      lightGray: "#D9D9D9",
     },
   },
   plugins: [],

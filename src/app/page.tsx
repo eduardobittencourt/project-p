@@ -1,6 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
+  const saveBet = async (formData) => {
+    "use server";
+
+    console.log(formData.get("date"));
+  };
   return (
     <main>
       <header className="flex flex-col gap-8 pb-10">
@@ -83,10 +89,87 @@ export default function Home() {
           que você escolheu, preencher seus dados e esperar a vontade do Theo :)
         </p>
 
+        <Link
+          className="text-white rounded-xl bg-brown p-2 text-center font-heading text-xl"
+          href="https://www.amazon.com.br/baby-reg/letcia-manzoli-eduardo-bittencourt-julho-2024-portoalegre/GMM40NRR9425"
+        >
+          Lista da Amazon
+        </Link>
+
         <p className="font-serif text-xl text-gray">
           Ah, se quiser escolher outros itens da lista fique a vontade, baby
           Theo agradece.
         </p>
+      </section>
+
+      <section>
+        <form action={saveBet}>
+          <div>
+            <h3>Junho</h3>
+            <div className="grid grid-cols-7 gap-2">
+              <div>D</div>
+              <div>S</div>
+              <div>T</div>
+              <div>Q</div>
+              <div>Q</div>
+              <div>S</div>
+              <div>S</div>
+              <div />
+              <div>
+                <label htmlFor="17/06">
+                  <input
+                    type="radio"
+                    name="date"
+                    value="17/06"
+                    id="17/06"
+                    className="peer hidden"
+                  />
+                  <span className="peer-disabled:text-lightGray font-serif text-gray peer-checked:text-brown">
+                    17
+                  </span>
+                </label>
+              </div>
+              <div>
+                <label htmlFor="18/06">
+                  <input
+                    type="radio"
+                    name="date"
+                    value="18/06"
+                    id="18/06"
+                    className="hidden"
+                  />
+                  <span>18</span>
+                </label>
+              </div>
+              <div>
+                <label htmlFor="19/06">
+                  <input
+                    type="radio"
+                    name="date"
+                    value="19/06"
+                    id="19/06"
+                    className="hidden"
+                  />
+                  <span>19</span>
+                </label>
+              </div>
+              <div>
+                <label htmlFor="20/06">
+                  <input
+                    type="radio"
+                    name="date"
+                    value="20/06"
+                    id="20/06"
+                    className="hidden"
+                  />
+                  <span>20</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit">enviar</button>
+        </form>
       </section>
     </main>
   );
