@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Caveat } from "next/font/google";
+import { Cinzel, Oooh_Baby, Hina_Mincho } from "next/font/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -7,10 +7,25 @@ export const metadata: Metadata = {
   description: "Criado por Eduardo Bittencourt",
 };
 
-const caveat = Caveat({
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-heading",
+  weight: "400",
+});
+
+const hinaMincho = Hina_Mincho({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-serif",
+  weight: "400",
+});
+
+const oohBaby = Oooh_Baby({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-calligraphy",
+  weight: "400",
 });
 
 type RootLayoutProps = Readonly<{
@@ -19,8 +34,11 @@ type RootLayoutProps = Readonly<{
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="pt-br" className={caveat.className}>
-      <body className="container mx-auto px-8 py-8">{children}</body>
+    <html
+      lang="pt-br"
+      className={`${oohBaby.variable} ${cinzel.variable} ${hinaMincho.variable}`}
+    >
+      <body className="container mx-auto px-8 py-20">{children}</body>
     </html>
   );
 }
