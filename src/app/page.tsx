@@ -90,7 +90,7 @@ export default function Home() {
         </p>
 
         <Link
-          className="text-white rounded-xl bg-brown p-2 text-center font-heading text-xl"
+          className="rounded-xl bg-brown p-2 text-center font-heading text-xl text-white"
           href="https://www.amazon.com.br/baby-reg/letcia-manzoli-eduardo-bittencourt-julho-2024-portoalegre/GMM40NRR9425"
         >
           Lista da Amazon
@@ -124,7 +124,7 @@ export default function Home() {
                     id="17/06"
                     className="peer hidden"
                   />
-                  <span className="peer-disabled:text-lightGray font-serif text-gray peer-checked:text-brown">
+                  <span className="font-serif text-gray peer-checked:text-brown peer-disabled:text-lightGray">
                     17
                   </span>
                 </label>
