@@ -38,7 +38,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       lang="pt-br"
       className={`${oohBaby.variable} ${cinzel.variable} ${hinaMincho.variable}`}
     >
-      <body className="bg-background container mx-auto px-8 py-20">
+      <body className="container mx-auto bg-background px-8 pt-20">
         {children}
       </body>
     </html>

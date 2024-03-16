@@ -169,24 +169,18 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-2 pt-4">
-            <div className="flex items-center gap-4">
+          <div className="flex items-center justify-between gap-2 pt-4">
+            <div className="flex flex-col items-center">
               <span className="text-xl text-gray">&#9733;</span>
-              <span className="font-serif text-xl text-gray">
-                datas disponíveis
-              </span>
+              <span className="font-serif text-xl text-gray">disponível</span>
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex flex-col items-center">
               <span className="text-xl text-lightGray">&#9733;</span>
-              <span className="font-serif text-xl text-gray">
-                datas indisponíveis
-              </span>
+              <span className="font-serif text-xl text-gray">indisponível</span>
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex flex-col items-center">
               <span className="text-xl text-brown">&#9733;</span>
-              <span className="font-serif text-xl text-gray">
-                data selecionada
-              </span>
+              <span className="font-serif text-xl text-gray">selecionada</span>
             </div>
           </div>
 
@@ -198,6 +192,10 @@ export default function Home() {
             className="mx-auto py-8"
           />
 
+          <h2 className="pb-4 text-center font-calligraphy text-3xl text-brown">
+            Sua escolha
+          </h2>
+
           <button
             type="submit"
             className="w-full rounded-xl bg-brown p-2 text-center font-heading text-xl text-white"
@@ -206,6 +204,12 @@ export default function Home() {
           </button>
         </form>
       </section>
+
+      <footer className="pb-8 pt-20">
+        <p className="text-center font-serif text-xl text-gray">
+          &#169; Manzoli Bittencourt. Favor não copiar
+        </p>
+      </footer>
     </main>
   );
 }
