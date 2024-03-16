@@ -3,7 +3,7 @@ import { Cinzel, Oooh_Baby, Hina_Mincho } from "next/font/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Quando o Theo vem?",
+  title: "Bolão chegada do Theo",
   description: "Criado por Eduardo Bittencourt",
 };
 
