@@ -13,7 +13,7 @@ export function Form() {
           id="name"
           name="name"
           type="text"
-          className="w-full appearance-none border-b border-transparent font-calligraphy text-xl text-gray focus:border-gray focus:outline-0"
+          className="w-full appearance-none rounded-none border-b border-transparent font-calligraphy text-xl text-gray focus:border-gray focus:outline-0"
         />
       </div>
 
@@ -25,7 +25,7 @@ export function Form() {
           id="email"
           name="email"
           type="email"
-          className="w-full appearance-none border-b border-transparent font-calligraphy text-xl text-gray focus:border-gray focus:outline-0"
+          className="w-full appearance-none rounded-none border-b border-transparent font-calligraphy text-xl text-gray focus:border-gray focus:outline-0"
         />
       </div>
 
