@@ -7,7 +7,10 @@ import { Hero } from "@/components/Hero";
 import { Rules } from "@/components/Rules";
 import { ShoppingList } from "@/components/ShoppingList";
 import { dates as datesSchema, db, insertDateSchema } from "@/db";
+import { resend } from "@/email";
 import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
+import MyEmail from "../../emails/Success";
 
 export default async function Home() {
   const saveDate = async (formData: FormData) => {
@@ -18,7 +21,16 @@ export default async function Home() {
 
     await db.insert(datesSchema).values(date);
 
+    await resend.emails.send({
+      from: "Theo <sucesso@oi.theo.gift>",
+      to: [date.email],
+      subject: "Bolão do Theo: Salvo com sucesso!",
+      react: MyEmail(),
+    });
+
     revalidatePath("/");
+
+    redirect("/sucesso");
   };
 
   return (
