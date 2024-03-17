@@ -13,6 +13,7 @@ const config: Config = {
       calligraphy: ["var(--font-calligraphy)"],
     },
     colors: {
+      transparent: "transparent",
       white: "#ffffff",
       background: "#FFFDFB",
       brown: "#af7e55",
