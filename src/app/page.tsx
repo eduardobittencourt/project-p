@@ -12,7 +12,13 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import Success from "../../emails/Success";
 
-export default async function Home() {
+type HomeProps = Readonly<{
+  searchParams: {
+    date: string;
+  };
+}>;
+
+export default async function Home({ searchParams: { date } }: HomeProps) {
   const saveDate = async (formData: FormData) => {
     "use server";
 
@@ -42,9 +48,9 @@ export default async function Home() {
       <Divider />
       <ShoppingList />
       <form action={saveDate}>
-        <Calendar />
+        <Calendar date={date} />
         <Divider />
-        <Form />
+        <Form date={date} />
       </form>
       <Footer />
     </main>

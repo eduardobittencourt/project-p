@@ -15,7 +15,9 @@ function CalendarHeader() {
   );
 }
 
-export async function Calendar() {
+type CalendarProps = Readonly<{ date: string }>;
+
+export async function Calendar({ date }: CalendarProps) {
   const dates = await db.query.dates.findMany();
   const datesObj = dates.reduce(
     (acc, { date, name }) => ({
@@ -43,71 +45,85 @@ export async function Calendar() {
             value="17/06"
             label="17"
             disabled={!!datesObj["17/06"]}
+            checked={date === "17/06"}
           />
           <CalendarCell
             value="18/06"
             label="18"
             disabled={!!datesObj["18/06"]}
+            checked={date === "18/06"}
           />
           <CalendarCell
             value="19/06"
             label="19"
             disabled={!!datesObj["19/06"]}
+            checked={date === "19/06"}
           />
           <CalendarCell
             value="20/06"
             label="20"
             disabled={!!datesObj["20/06"]}
+            checked={date === "20/06"}
           />
           <CalendarCell
             value="21/06"
             label="21"
             disabled={!!datesObj["21/06"]}
+            checked={date === "21/06"}
           />
           <CalendarCell
             value="22/06"
             label="22"
             disabled={!!datesObj["22/06"]}
+            checked={date === "22/06"}
           />
           <CalendarCell
             value="23/06"
             label="23"
             disabled={!!datesObj["23/06"]}
+            checked={date === "23/06"}
           />
           <CalendarCell
             value="24/06"
             label="24"
             disabled={!!datesObj["24/06"]}
+            checked={date === "24/06"}
           />
           <CalendarCell
             value="25/06"
             label="25"
             disabled={!!datesObj["25/06"]}
+            checked={date === "25/06"}
           />
           <CalendarCell
             value="26/06"
             label="26"
             disabled={!!datesObj["26/06"]}
+            checked={date === "26/06"}
           />
           <CalendarCell
             value="27/06"
             label="27"
             disabled={!!datesObj["27/06"]}
+            checked={date === "27/06"}
           />
           <CalendarCell
             value="28/06"
             label="28"
             disabled={!!datesObj["28/06"]}
+            checked={date === "28/06"}
           />
           <CalendarCell
             value="29/06"
             label="29"
             disabled={!!datesObj["29/06"]}
+            checked={date === "29/06"}
           />
           <CalendarCell
             value="30/06"
             label="30"
             disabled={!!datesObj["30/06"]}
+            checked={date === "30/06"}
           />
         </div>
       </div>
@@ -127,71 +143,85 @@ export async function Calendar() {
             value="01/07"
             label="01"
             disabled={!!datesObj["01/07"]}
+            checked={date === "01/07"}
           />
           <CalendarCell
             value="02/07"
             label="02"
             disabled={!!datesObj["02/07"]}
+            checked={date === "02/07"}
           />
           <CalendarCell
             value="03/07"
             label="03"
             disabled={!!datesObj["03/07"]}
+            checked={date === "03/07"}
           />
           <CalendarCell
             value="04/07"
             label="04"
             disabled={!!datesObj["04/07"]}
+            checked={date === "04/07"}
           />
           <CalendarCell
             value="05/07"
             label="05"
             disabled={!!datesObj["05/07"]}
+            checked={date === "05/07"}
           />
           <CalendarCell
             value="06/07"
             label="06"
             disabled={!!datesObj["06/07"]}
+            checked={date === "06/07"}
           />
           <CalendarCell
             value="07/07"
             label="07"
             disabled={!!datesObj["07/07"]}
+            checked={date === "07/07"}
           />
           <CalendarCell
             value="08/07"
             label="08"
             disabled={!!datesObj["08/07"]}
+            checked={date === "08/07"}
           />
           <CalendarCell
             value="09/07"
             label="09"
             disabled={!!datesObj["09/07"]}
+            checked={date === "09/07"}
           />
           <CalendarCell
             value="10/07"
             label="10"
             disabled={!!datesObj["10/07"]}
+            checked={date === "10/07"}
           />
           <CalendarCell
             value="11/07"
             label="11"
             disabled={!!datesObj["11/07"]}
+            checked={date === "11/07"}
           />
           <CalendarCell
             value="12/07"
             label="12"
             disabled={!!datesObj["12/07"]}
+            checked={date === "12/07"}
           />
           <CalendarCell
             value="13/07"
             label="13"
             disabled={!!datesObj["13/07"]}
+            checked={date === "13/07"}
           />
           <CalendarCell
             value="14/07"
             label="14"
             disabled={!!datesObj["14/07"]}
+            checked={date === "14/07"}
           />
         </div>
       </div>
@@ -218,6 +248,8 @@ export async function Calendar() {
           </span>
         </div>
       </div>
+
+      <input type="text" name="date" />
 
       <span className="text-center font-serif text-gray md:col-span-3 md:text-lg">
         *importante: nossa DPP (data prevista de parto) é no dia 03 de Julho,

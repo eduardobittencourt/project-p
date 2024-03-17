@@ -1,9 +1,15 @@
-export function Form() {
+type FormProps = Readonly<{ date: string }>;
+
+export function Form({ date }: FormProps) {
   return (
     <section className="flex flex-col gap-8">
       <h2 className="text-center font-calligraphy text-3xl text-brown md:text-left md:text-6xl">
         Sua escolha
       </h2>
+
+      <span className="font-serif text-xl text-gray md:text-2xl">
+        Data escolhida: {date}
+      </span>
 
       <div className="flex items-center gap-2">
         <label
