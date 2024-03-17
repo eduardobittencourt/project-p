@@ -3,6 +3,7 @@ import {
   Container,
   Head,
   Heading,
+  Hr,
   Html,
   Img,
   Tailwind,
@@ -20,6 +21,7 @@ export const MyEmail = () => {
               fontFamily: {
                 default:
                   "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
+                serif: "serif",
               },
               colors: {
                 transparent: "transparent",
@@ -39,23 +41,32 @@ export const MyEmail = () => {
             </Heading>
 
             <Img
-              src="https://www.theo.gift/axolotl.png"
+              src="https://www.theo.gift/axolotl-2.png"
               alt="An axolotl"
-              width="445"
-              height="319"
+              width="300"
+              height="300"
+              className="mx-auto mb-10"
             />
 
-            <Text className="text-xl text-gray">
+            <Text className="mx-auto font-serif text-lg text-gray">
               Obrigada por topar essa brincadeira conosco! Ficamos super felizes
               em dividir esse momento mágico com você.
             </Text>
 
-            <Text className="text-xl text-gray">
+            <Text className="mx-auto font-serif text-lg text-gray">
               Agora é só esperar a vontade do Theo e torcer pro seu palpite ser
               o correto.
             </Text>
 
-            <Text className="text-xl text-gray">Boa sorte!</Text>
+            <Text className="mx-auto font-serif text-lg text-gray">
+              Boa sorte!
+            </Text>
+
+            <Hr />
+
+            <Text className="mx-auto text-center font-serif text-sm text-gray">
+              &#169; Manzoli Bittencourt. Favor não copiar
+            </Text>
           </Container>
         </Tailwind>
       </Body>
