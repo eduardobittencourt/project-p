@@ -19,6 +19,7 @@ export function ShoppingList() {
       <Link
         className="rounded-xl bg-brown p-2 text-center font-heading text-xl text-white md:self-center md:px-8"
         href="https://www.amazon.com.br/baby-reg/letcia-manzoli-eduardo-bittencourt-julho-2024-portoalegre/GMM40NRR9425"
+        target="_blank"
       >
         Lista da Amazon
       </Link>
