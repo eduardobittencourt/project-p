@@ -249,8 +249,6 @@ export async function Calendar({ date }: CalendarProps) {
         </div>
       </div>
 
-      <input type="text" name="date" />
-
       <span className="text-center font-serif text-gray md:col-span-3 md:text-lg">
         *importante: nossa DPP (data prevista de parto) é no dia 03 de Julho,
         quando Theo completa 40 semanas.
