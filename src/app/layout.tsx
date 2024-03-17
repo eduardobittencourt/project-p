@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cinzel, Oooh_Baby, Hina_Mincho } from "next/font/google";
+import { Cinzel, Hina_Mincho, Oooh_Baby } from "next/font/google";
 import "./globals.css";
 
 export const metadata: Metadata = {

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Divider() {
+export function Divider() {
   return (
     <Image
       src="/separator.png"
