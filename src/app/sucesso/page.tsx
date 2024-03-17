@@ -20,7 +20,7 @@ export default function SuccessPage() {
         />
 
         <p className="font-serif text-xl text-gray md:text-2xl">
-          Obrigada por topar essa brincadeira conosco! Ficamos super felizes em
+          Obrigado por topar essa brincadeira conosco! Ficamos super felizes em
           dividir esse momento mágico com você.
           <br />
           <br />
