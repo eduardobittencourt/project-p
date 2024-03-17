@@ -10,7 +10,7 @@ import { dates as datesSchema, db, insertDateSchema } from "@/db";
 import { resend } from "@/email";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
-import MyEmail from "../../emails/Success";
+import Success from "../../emails/Success";
 
 export default async function Home() {
   const saveDate = async (formData: FormData) => {
@@ -22,10 +22,10 @@ export default async function Home() {
     await db.insert(datesSchema).values(date);
 
     await resend.emails.send({
-      from: "Theo <sucesso@oi.theo.gift>",
+      from: "Theo Manzoli Bittencourt <sucesso@oi.theo.gift>",
       to: [date.email],
-      subject: "Bolão do Theo: Salvo com sucesso!",
-      react: MyEmail(),
+      subject: "Obrigado por participar do bolão!",
+      react: <Success date={date.date} name={date.name} />,
     });
 
     revalidatePath("/");

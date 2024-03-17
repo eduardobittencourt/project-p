@@ -10,7 +10,12 @@ import {
   Text,
 } from "@react-email/components";
 
-export const MyEmail = () => {
+export type SuccessProps = {
+  date: string;
+  name: string;
+};
+
+export const Success = ({ date, name }: SuccessProps) => {
   return (
     <Html>
       <Head />
@@ -62,6 +67,18 @@ export const MyEmail = () => {
               Boa sorte!
             </Text>
 
+            <Heading className="font-default mx-auto pt-4 text-center text-2xl text-brown">
+              Suas informações
+            </Heading>
+
+            <Text className="mx-auto font-serif text-lg text-gray">
+              Nome: {name}
+            </Text>
+
+            <Text className="mx-auto font-serif text-lg text-gray">
+              Data: {date}
+            </Text>
+
             <Hr />
 
             <Text className="mx-auto text-center font-serif text-sm text-gray">
@@ -74,4 +91,4 @@ export const MyEmail = () => {
   );
 };
 
-export default MyEmail;
+export default Success;
