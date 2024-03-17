@@ -54,7 +54,7 @@ export const Success = ({ date, name }: SuccessProps) => {
             />
 
             <Text className="mx-auto font-serif text-lg text-gray">
-              Obrigada por topar essa brincadeira conosco! Ficamos super felizes
+              Obrigado por topar essa brincadeira conosco! Ficamos super felizes
               em dividir esse momento mágico com você.
             </Text>
 
