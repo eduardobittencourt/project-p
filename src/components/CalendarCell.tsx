@@ -16,7 +16,7 @@ export function CalendarCell({ value, disabled, label }: CalendarCellProps) {
         value={value}
       />
 
-      <span className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-transparent font-serif text-xl text-gray peer-checked:border-brown peer-checked:text-brown peer-disabled:text-lightGray">
+      <span className="flex h-10 w-10 items-center justify-center rounded-full border border-transparent font-serif text-xl text-gray peer-checked:border-brown peer-checked:text-brown peer-enabled:cursor-pointer peer-disabled:text-lightGray">
         {label}
       </span>
     </label>

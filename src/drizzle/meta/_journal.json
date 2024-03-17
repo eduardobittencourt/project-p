@@ -1,12 +1,12 @@
 {
   "version": "5",
-  "dialect": "sqlite",
+  "dialect": "pg",
   "entries": [
     {
       "idx": 0,
       "version": "5",
-      "when": 1710644869755,
-      "tag": "0000_green_randall_flagg",
+      "when": 1710693025226,
+      "tag": "0000_wakeful_tenebrous",
       "breakpoints": true
     }
   ]

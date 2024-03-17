@@ -6,14 +6,19 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Rules } from "@/components/Rules";
 import { ShoppingList } from "@/components/ShoppingList";
+import { dates as datesSchema, db, insertDateSchema } from "@/db";
+import { revalidatePath } from "next/cache";
 
-export default function Home() {
+export default async function Home() {
   const saveDate = async (formData: FormData) => {
     "use server";
 
     const formValues = Object.fromEntries(formData.entries());
+    const date = insertDateSchema.parse(formValues);
 
-    console.log(formValues);
+    await db.insert(datesSchema).values(date);
+
+    revalidatePath("/");
   };
 
   return (
