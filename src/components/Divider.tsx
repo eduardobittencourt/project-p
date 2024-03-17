@@ -7,7 +7,7 @@ export function Divider() {
       width={50}
       height={50}
       alt="A starfish"
-      className="mx-auto py-8"
+      className="mx-auto py-16"
     />
   );
 }
