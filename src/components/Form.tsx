@@ -8,7 +8,7 @@ export function Form({ date }: FormProps) {
       </h2>
 
       <span className="font-serif text-xl text-gray md:text-2xl">
-        Data escolhida: {date}
+        Data escolhida: <span className="font-calligraphy">{date}</span>
       </span>
 
       <div className="flex items-center gap-2">

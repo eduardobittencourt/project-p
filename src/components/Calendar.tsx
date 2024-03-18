@@ -41,6 +41,38 @@ export async function Calendar({ date }: CalendarProps) {
           <CalendarHeader />
 
           <div />
+          <div />
+          <div />
+          <CalendarCell
+            value="12/06"
+            label="12"
+            disabled={!!datesObj["12/06"]}
+            checked={date === "12/06"}
+          />
+          <CalendarCell
+            value="13/06"
+            label="13"
+            disabled={!!datesObj["13/06"]}
+            checked={date === "13/06"}
+          />
+          <CalendarCell
+            value="14/06"
+            label="14"
+            disabled={!!datesObj["14/06"]}
+            checked={date === "14/06"}
+          />
+          <CalendarCell
+            value="15/06"
+            label="15"
+            disabled={!!datesObj["15/06"]}
+            checked={date === "15/06"}
+          />
+          <CalendarCell
+            value="16/06"
+            label="16"
+            disabled={!!datesObj["16/06"]}
+            checked={date === "16/06"}
+          />
           <CalendarCell
             value="17/06"
             label="17"
@@ -222,6 +254,24 @@ export async function Calendar({ date }: CalendarProps) {
             label="14"
             disabled={!!datesObj["14/07"]}
             checked={date === "14/07"}
+          />
+          <CalendarCell
+            value="15/07"
+            label="15"
+            disabled={!!datesObj["15/07"]}
+            checked={date === "15/07"}
+          />
+          <CalendarCell
+            value="16/07"
+            label="16"
+            disabled={!!datesObj["16/07"]}
+            checked={date === "16/07"}
+          />
+          <CalendarCell
+            value="17/07"
+            label="17"
+            disabled={!!datesObj["17/07"]}
+            checked={date === "17/07"}
           />
         </div>
       </div>
