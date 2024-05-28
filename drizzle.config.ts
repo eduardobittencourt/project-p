@@ -14,4 +14,5 @@ export default {
   dbCredentials: {
     connectionString: process.env.POSTGRES_URL!,
   },
+  tablesFilter: ["projectp_*"],
 } satisfies Config;
